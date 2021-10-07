@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="css/style.min.css" type="text/css" />
+    <script src="script.js" defer></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Calculator app</title>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="theme1">
+    <div class="calculator">
+      <div class="header split">
+        <div class="logo">calc</div>
+        <div class="theme-container split">
+          <div class="label">theme</div>
+          <div class="themes">
+            <div class="theme-labels split">
+              <label for="firstTheme">1</label>
+              <label for="secondTheme">2</label>
+              <label for="thirdTheme">3</label>
+            </div>
+            <div class="radios">
+              <form class="split">
+                <div><input type="radio" id="firstTheme" name="theme" value="theme1"/><span class="checked"></span></div>
+                <div>
+                  <input
+                    type="radio"
+                    id="secondTheme"
+                    name="theme"
+                    value="theme2"
+                  /><span class="checked"></span>
+                </div>
+                <div><input type="radio" name="theme" id="thirdTheme" value="theme3" /><span class="checked"></span></div>
+                            </div>
+              </form>
+          </div>
+        </div>
+      </div>
+      <div class="output">
+        <div data-type="previous" class="previousOperand"></div>
+        <div data-type="current" class="currentOperand"></div>
+      </div>
+      <div class="calculator-grid">
+        <button data-type="number">7</button>
+        <button data-type="number">8</button>
+        <button data-type="number">9</button>
+        <button data-type="delete" class="bg-dark small-text">DEL</button>
+        <button data-type="number">4</button>
+        <button data-type="number">5</button>
+        <button data-type="number">6</button>
+        <button data-type="operation">+</button>
+        <button data-type="number">1</button>
+        <button data-type="number">2</button>
+        <button data-type="number">3</button>
+        <button data-type="operation">-</button>
+        <button data-type="number">.</button>
+        <button data-type="number">0</button>
+        <button data-type="operation">/</button>
+        <button data-type="operation">x</button>
+        <button data-type="reset" class="span-two bg-dark small-text">
+          RESET
+        </button>
+        <button data-type="equal" class="span-two bg-alert small-text">
+          =
+        </button>
+      </div>
+    </div>
+
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </footer>
+  </body>
+</html>

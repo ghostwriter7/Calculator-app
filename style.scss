@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@mixin theme(
+  $bg-main,
+  $bg-secondary,
+  $bg-screen,
+  $key,
+  $key-shadow,
+  $key-color,
+  $key-del,
+  $key-del-shadow,
+  $key-equal,
+  $key-equal-shadow,
+  $key-equal-color,
+  $text-primary,
+  $text-secondary
+) {
+  background-color: $bg-main;
+  color: $text-secondary;
+  form {
+    background-color: $bg-secondary;
+  }
+  .checked {
+    background-color: $key-equal;
+  }
+  .calculator-grid {
+    background-color: $bg-secondary;
+  }
+  .output {
+    background-color: $bg-screen;
+  }
+  button {
+    background-color: $key;
+    box-shadow: 0px 4px 0px $key-shadow;
+    color: $key-color;
+
+    &:hover {
+      opacity: 0.8;
+    }
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+  .bg-alert {
+    background-color: $key-equal;
+    box-shadow: 0px 4px 0px $key-equal-shadow;
+    color: $key-equal-color;
+  }
+  .bg-dark {
+    background-color: $key-del;
+    box-shadow: 0px 4px 0px $key-del-shadow;
+    color: hsl(0, 0, 100%);
+  }
+}
+
+//THEME ONE
+$bg-main-01: hsl(222, 26%, 31%);
+$bg-secondary-01: hsl(223, 31%, 20%);
+$bg-screen-01: hsl(224, 36%, 15%);
+$key-01: hsl(30, 25%, 89%);
+$key-shadow-01: hsl(28, 16%, 65%);
+$key-color-01: hsl(221, 14%, 31%);
+$key-del-01: hsl(225, 21%, 49%);
+$key-del-shadow-01: hsl(224, 28%, 35%);
+$key-equal-01: hsl(6, 63%, 50%);
+$key-equal-shadow-01: hsl(6, 70%, 34%);
+$key-equal-color-01: hsl(0, 0, 100%);
+$text-primary-01: hsl(221, 14%, 31%);
+$text-secondary-01: hsl(0, 0, 100%);
+
+.theme1 {
+  @include theme(
+    $bg-main-01,
+    $bg-secondary-01,
+    $bg-screen-01,
+    $key-01,
+    $key-shadow-01,
+    $key-color-01,
+    $key-del-01,
+    $key-del-shadow-01,
+    $key-equal-01,
+    $key-equal-shadow-01,
+    $key-equal-color-01,
+    $text-primary-01,
+    $text-secondary-01
+  );
+}
+
+$bg-main-02: hsl(0, 0%, 90%);
+$bg-secondary-02: hsl(0, 5%, 81%);
+$bg-screen-02: hsl(0, 0%, 93%);
+$key-02: hsl(45, 7%, 89%);
+$key-shadow-02: hsl(35, 11%, 61%);
+$key-color-02: hsl(60, 10%, 19%);
+$key-del-02: hsl(185, 42%, 37%);
+$key-del-shadow-02: hsl(185, 58%, 25%);
+$key-equal-02: hsl(25, 98%, 40%);
+$key-equal-shadow-02: hsl(25, 99%, 27%);
+$key-equal-color-02: hsl(0, 0, 100%);
+$text-primary-02: hsl(0, 0, 100%);
+$text-secondary-02: hsl(60, 10%, 19%);
+
+.theme2 {
+  @include theme(
+    $bg-main-02,
+    $bg-secondary-02,
+    $bg-screen-02,
+    $key-02,
+    $key-shadow-02,
+    $key-color-02,
+    $key-del-02,
+    $key-del-shadow-02,
+    $key-equal-02,
+    $key-equal-shadow-02,
+    $key-equal-color-02,
+    $text-primary-02,
+    $text-secondary-02
+  );
+}
+
+$bg-main-03: hsl(268, 75%, 9%);
+$bg-secondary-03: hsl(268, 71%, 12%);
+$bg-screen-03: hsl(268, 71%, 12%);
+$key-03: hsl(268, 47%, 21%);
+$key-shadow-03: hsl(290, 70%, 36%);
+$key-color-03: hsl(52, 100%, 62%);
+$key-del-03: hsl(281, 89%, 26%);
+$key-del-shadow-03: hsl(285, 91%, 52%);
+$key-equal-03: hsl(176, 100%, 44%);
+$key-equal-shadow-03: hsl(177, 92%, 70%);
+$key-equal-color-03: hsl(198, 20%, 13%);
+$text-primary-03: hsl(52, 100%, 62%);
+$text-secondary-03: hsl(52, 100%, 62%);
+
+.theme3 {
+  @include theme(
+    $bg-main-03,
+    $bg-secondary-03,
+    $bg-screen-03,
+    $key-03,
+    $key-shadow-03,
+    $key-color-03,
+    $key-del-03,
+    $key-del-shadow-03,
+    $key-equal-03,
+    $key-equal-shadow-03,
+    $key-equal-color-03,
+    $text-primary-03,
+    $text-secondary-03
+  );
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 100vh;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+.split {
+  display: flex;
+}
+
+.calculator {
+  margin: 25px 5px 50px;
+  .header {
+    justify-content: space-between;
+    align-items: center;
+
+    .theme-container {
+      gap: 10px;
+    }
+
+    .label {
+      align-self: flex-end;
+      font-size: 0.4em;
+      text-transform: uppercase;
+      padding-bottom: 3px;
+    }
+    form {
+      justify-content: space-between;
+      gap: 10px;
+      padding: 5px 3px;
+      border-radius: 25px;
+
+      div {
+        position: relative;
+        height: 15px;
+        width: 15px;
+
+        input {
+          opacity: 0;
+          cursor: pointer;
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+
+        input:checked + .checked {
+          opacity: 1;
+        }
+        .checked {
+          position: absolute;
+          width: 15px;
+          height: 15px;
+          border-radius: 100%;
+          left: 0;
+          top: 0;
+          opacity: 0;
+          pointer-events: none;
+        }
+      }
+    }
+    .theme-labels {
+      font-size: 0.4em;
+      justify-content: space-around;
+    }
+  }
+
+  .output {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100px;
+    align-items: flex-end;
+    padding: 10px;
+    margin-block: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    & > * {
+      word-break: break-all;
+    }
+
+    .previousOperand {
+      font-size: 0.7em;
+      opacity: 0.5;
+    }
+  }
+
+  .calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(5vw, 100px));
+    grid-template-rows: repeat(5, minmax(5vw, 70px));
+    align-content: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 10px;
+
+    button {
+      margin: 7px;
+      width: calc(100% - 14px);
+      height: calc(100% - 14px);
+      font-family: inherit;
+      font-size: 0.8em;
+      cursor: pointer;
+      border: 0;
+      outline: none;
+      border-radius: 5px;
+    }
+
+    .span-two {
+      grid-column: span 2;
+    }
+    .small-text {
+      font-size: 0.6em;
+    }
+  }
+}
